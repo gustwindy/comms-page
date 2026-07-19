@@ -1,0 +1,155 @@
+@font-face {
+    src: url(rainkiss.ttf);
+    font-family: rain-kiss;
+}
+@font-face {
+    src: url(starborn.ttf);
+    font-family: star-born;
+}
+
+:root {
+    font-family: rain-kiss;
+    --c1-2: #bdaad7;
+    --c1: #C7B5E0;
+    --c2: #E6E9EF;
+    --c3: #DBC6FB;
+    --c4: #AD77FD;
+    --c5: #BE92FF;
+    --c6: #882AFB;
+    --c7: #DAD9ED;
+    --c8: #756a83;
+    --c9: #4b3c60;
+
+    color: var(--c9);
+}
+
+body {
+    background-color: var(--c1);
+    display: flex;
+    margin: 150px;
+    
+    background: repeating-linear-gradient(45deg, var(--c1), var(--c1) 10px, var(--c1-2) 10px,var(--c1-2) 20px);
+    justify-content: center;
+}
+
+.content {
+    background-color: var(--c7);
+    padding: 50px;
+    border-radius: 30px;
+    border: 5px solid var(--c6);
+    outline: 15px solid var(--c4);
+}
+
+b {
+    color: var(--c4);
+}
+i {
+    color: var(--c6)
+}
+u {
+    text-decoration: underline 3px var(--c4);
+}
+mark {
+    background-color: unset;
+    position: relative;
+    z-index: 0;
+}
+mark::before {
+    width: calc(100% + 2px);
+    height: 70%;
+    display: block;
+    z-index: -1;
+    bottom: 0;
+    left: -1px;
+    position: absolute;
+    background-color: var(--c5);
+    opacity: 0.5;
+    content: "";
+}
+h1 {
+    font-family: star-born;
+    color: var(--c6);
+}
+
+.guhw {
+    opacity: 0.5;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 45px;
+}
+
+.status {
+    display: block;
+    padding: 32px;
+    background-color: rgb(215, 215, 215);
+    width: max-content;
+    border-radius: 32px;
+    border: 2px solid rgb(78, 78, 78);
+}
+
+.comms-open .status {
+    background-color: rgb(168, 243, 195);
+    border: 2px solid rgb(30, 59, 41);
+    color: rgb(30, 59, 41);
+}
+.comms-closed .status {
+    background-color: rgb(243, 168, 213);
+    border: 2px solid rgb(59, 30, 30);
+    color: rgb(59, 30, 30);
+}
+
+.comms {
+    font-size: 3rem;
+    display: block;
+}
+
+.contact {
+    font-size: 1.25 rem;
+}
+.openclose {
+    font-family: star-born;
+    display: none;
+}
+.comms-open .open-text {
+    display: inline;
+}
+.comms-closed .closed-text {
+    display: inline;
+}
+:not(.comms-open):not(.comms-closed) .forgot-text {
+    display: inline;
+}
+
+.tabs {
+    display: flex;
+    height: 90px;
+    gap: 15px;
+}
+
+.tabs button {
+    flex: 1;
+    border-radius: 90px;
+    background-color: var(--c3);
+    font-family: star-born;
+    font-size: 35px;
+    border: 5px solid var(--c4);
+    color: var(--c4);
+    transform: rotate(0deg);
+    transition: transform 0.25s;
+}
+.tabs button:hover {
+    transform: rotate(-5deg);
+}
+.bigger {
+    font-size: 1.3rem;
+}
+.divider {
+    width: 100%;
+    height: 4px;
+    border-radius: 8px;
+    display: block;
+    background-color: var(--c4);
+}
