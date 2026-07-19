@@ -1,0 +1,1 @@
+window.location.href = "https://guhw.dev/comms-page/editor/"

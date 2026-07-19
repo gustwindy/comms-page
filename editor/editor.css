@@ -1,0 +1,117 @@
+@font-face {
+    src: url(../rainkiss.ttf);
+    font-family: rain-kiss;
+}
+@font-face {
+    src: url(../starborn.ttf);
+    font-family: star-born;
+}
+
+:root {
+    font-family: rain-kiss;
+    --c1-2: #bdaad7;
+    --c1: #C7B5E0;
+    --c2: #E6E9EF;
+    --c3: #DBC6FB;
+    --c4: #AD77FD;
+    --c5: #BE92FF;
+    --c6: #882AFB;
+    --c7: #DAD9ED;
+    --c8: #756a83;
+    --c9: #4b3c60;
+
+    color: var(--c9);
+}
+
+body {
+    background-color: var(--c1);
+    display: flex;
+    margin: 150px;
+    
+    background: repeating-linear-gradient(45deg, var(--c1), var(--c1) 10px, var(--c1-2) 10px,var(--c1-2) 20px);
+    justify-content: center;
+}
+button {
+    width: 100%;
+    font-size: 1.2rem;
+    border:var(--c4) 5px solid;
+    border-radius: 10px;
+    background-color: var(--c1);
+    color: black;
+    padding: 10px;
+    margin: 5px;
+    font-family: rain-kiss;
+}
+.content {
+    background-color: var(--c7);
+    padding: 50px;
+    border-radius: 30px;
+    border: 5px solid var(--c6);
+    outline: 15px solid var(--c4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-family: star-born;
+    color: var(--c6);
+}
+
+.preview iframe {
+    background-color: black;
+    width: 70vw;
+    aspect-ratio: calc(16 / 9);
+    zoom: 0.75;
+}
+.upload {
+    font-size: 2rem;
+}
+
+.prop, .template {
+    display: none;
+    width: 100%;
+    font-size: 1.2rem;
+    min-height: max-content;
+    resize: vertical;
+    border:var(--c9) 5px solid;
+    border-radius: 10px;
+    background-color: var(--c8);
+    color: white;
+    padding: 5px;
+}
+.visible, .template {
+    display: block;
+}
+
+.editable {
+    width: 100%;
+}
+
+.category {
+    background-color: #756a83aa;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 15px;
+    color: var(--c2);
+}
+.topbar, .elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.category h3 {
+    margin: 0;
+}
+.category button, input {
+    font-family: rain-kiss;
+    border: none;
+    font-size: 1.25rem;
+    background-color: var(--c4);
+    padding: 5px 15px 5px 15px;
+    border-radius: 15px;
+    margin: 5px;
+}
